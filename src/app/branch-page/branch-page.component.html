@@ -1,0 +1,80 @@
+<!-- <p>branch-page works!</p>
+<button class="btn btn-primary">Bootstrap Button</button> -->
+<!-- Sidebar -->
+<div #sidebar class="sidebar">
+    <a href="javascript:void(0)" (click)="navigateToBranch()">Branch</a>
+    <a href="javascript:void(0)" (click)="navigateToAnotherLink()">Another Link</a>
+    <a href="javascript:void(0)">Option 3</a>
+    <a href="javascript:void(0)">Option 4</a>
+    <a href="javascript:void(0)">Option 5</a>
+</div>
+<!-- Navbar -->
+<div class="navbar">
+    <nav class="navbar navbar-expand-lg">
+        <a class="navbar-brand" href="javascript:void(0)" (click)="toggleNav()">
+            <i class="bi bi-justify" style="font-size: 1.5em;"></i>
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav me-auto">
+                <li class="nav-item active">
+                    <a class="nav-link fs-4" href="#"><span style="color: aliceblue;">Home</span></a>
+                </li>
+            </ul>
+            <div class="dropdown ms-auto">
+                <button class="btn dropdown-toggle" type="button" id="dropdownMenuButton" data-bs-toggle="dropdown" aria-expanded="false">
+                    <i class="bi bi-person-circle" style="font-size: 1.5em;"></i>
+                </button>
+                <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="dropdownMenuButton">
+                    <li><a class="dropdown-item" href="#">My Profile</a></li>
+                    <li><a class="dropdown-item" href="#">Logout</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+</div>
+<!-- Table Section -->
+<div id="main-content" class="container mt-4">
+    <div class="header-row">
+        <h2 class="text-center mb-4">Sub-Branch Details</h2>
+        <a class="btn-custom" [routerLink]="['/branch/add']">Add Sub-Branch</a>
+    </div>
+    <table class="custom-table">
+        <thead>
+            <tr>
+                <th scope="col">Sr. No.</th>
+                <th scope="col">Sub-Branch Name</th>
+                <th scope="col">Created On</th>
+                <th scope="col">View Detail</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>1</td>
+                <td>Main Branch</td>
+                <td>2024-08-01</td>
+                <td><a class="btn-custom" [routerLink]="['/branch']">View</a></td>
+            </tr>
+            <tr>
+                <td>2</td>
+                <td>Secondary Branch</td>
+                <td>2024-08-10</td>
+                <td><a class="btn-custom" [routerLink]="['/branch']">View</a></td>
+            </tr>
+            <tr>
+                <td>3</td>
+                <td>Third Branch</td>
+                <td>2024-08-10</td>
+                <td><a class="btn-custom" [routerLink]="['/branch']">View</a></td>
+            </tr>
+            <tr>
+                <td>4</td>
+                <td>Fourth Branch</td>
+                <td>2024-08-10</td>
+                <td><a class="btn-custom" [routerLink]="['/branch', 4]">View</a></td>
+            </tr>
+        </tbody>
+    </table>
+</div>
